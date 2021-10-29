@@ -28,15 +28,12 @@ public class Annonce {
 	private int stock;
 	private String type;
 	private String description;
-
+    @ManyToOne
 	private Plante plante;
 	@ManyToOne
 	private User user;
 
-	@ManyToOne
-	private Plante plante;
-	@ManyToOne
-	private User user;
+
 
 
 

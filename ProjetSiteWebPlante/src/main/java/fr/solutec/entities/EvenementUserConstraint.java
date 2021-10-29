@@ -20,7 +20,6 @@ public class EvenementUserConstraint implements Serializable{
 	private Long idEvenement;
 
 
-	private Long idEvenement;
 	
 
 	private Long idUser;

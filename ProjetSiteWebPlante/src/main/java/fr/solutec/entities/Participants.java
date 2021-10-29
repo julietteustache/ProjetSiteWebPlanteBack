@@ -30,11 +30,11 @@ public class Participants implements Serializable{
 	@Id
 
 	@ManyToOne
-	private Evenement evenement;
 
 	private Long idEvenement;
 	
 
 	@Id
+	
 	private Long idUser;
 }
