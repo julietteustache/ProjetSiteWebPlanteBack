@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 public class AnnonceUserConstraint implements Serializable{
 	
+	/**
+	 * 
+	 */
+	
+
 	private Long annonce;
 	
 	private Long user;
@@ -11,4 +16,6 @@ public class AnnonceUserConstraint implements Serializable{
 	public AnnonceUserConstraint() {
 //création du couple de clé primaire		
 	}
+
+
 }

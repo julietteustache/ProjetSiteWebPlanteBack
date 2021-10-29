@@ -17,6 +17,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor @Data
 public class Participants implements Serializable {
 
+	/**
+	 * 
+	 */
+	
+
 	@Id
 	@ManyToOne
 	private Evenement evenement;

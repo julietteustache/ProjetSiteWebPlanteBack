@@ -17,6 +17,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor @Data
 public class Commande implements Serializable{
 	
+	/**
+	 * 
+	 */
+
+
 	@Id
 	@ManyToOne
 	private User user;
