@@ -16,7 +16,10 @@ public class Commentaire {
 	
 	@ManyToOne
 	User auteur;
+	@ManyToOne
 	Plante plante;
+	@ManyToOne
 	Annonce annonce;
+	@ManyToOne
 	Evenement evenement;
 }
