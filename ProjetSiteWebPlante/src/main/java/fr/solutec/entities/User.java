@@ -3,6 +3,7 @@ package fr.solutec.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -74,6 +75,8 @@ public class User {
 	private String mdp;
 	private String statue;
 	private Long score;
+	
+	@ManyToOne
 	private Adresse adresse;
 
 }
