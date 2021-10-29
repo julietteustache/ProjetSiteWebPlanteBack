@@ -2,6 +2,7 @@ package fr.solutec.entities;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -10,6 +11,8 @@ public class Commentaire {
 	@Id @GeneratedValue
 	Long idCommentaire;
 	String commentaire;
+	
+	@ManyToOne
 	User auteur;
 	Plante plante;
 	Annonce annonce;
