@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import javax.persistence.OneToMany;
+
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -21,6 +23,10 @@ public class Message {
 	@ManyToOne
 	private User expediteur;
 	
+
 	@OneToOne
+
+	@ManyToOne
+
 	private User destinataire;
 }

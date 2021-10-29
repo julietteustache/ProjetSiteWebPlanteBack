@@ -9,9 +9,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @IdClass(AnnonceUserConstraint.class)
+
+
+
+
+@NoArgsConstructor @AllArgsConstructor @Data
 
 public class Commande implements Serializable{
 	
@@ -21,12 +31,10 @@ public class Commande implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@ManyToOne
-	private User user;
-	
+	private Long idUser;
+
 	@Id
-	@OneToOne
-	private Annonce annonce;
+	private Long idAnnonce;
 	
 private int quantite;
 
