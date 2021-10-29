@@ -20,18 +20,18 @@ public class CommentaireRest {
 		return comRepos.save(c);
 	}
 	
-	@GetMapping("getcomplante")
-	public Iterable<Commentaire> getComPlante(Plante p) {
+	@PostMapping("getcomplante")
+	public Iterable<Commentaire> getComPlante(@RequestBody Plante p) {
 		return comRepos.findByPlante(p);
 	}
 	
-	@GetMapping("getcomannonce")
-	public Iterable<Commentaire> getComAnnonce(Annonce a) {
+	@PostMapping("getcomannonce")
+	public Iterable<Commentaire> getComAnnonce(@RequestBody Annonce a) {
 		return comRepos.findByAnnonce(a);
 	}
 	
-	@GetMapping("getcomevt")
-	public Iterable<Commentaire> getComEvt(Evenement e) {
+	@PostMapping("getcomevt")
+	public Iterable<Commentaire> getComEvt(@RequestBody Evenement e) {
 		return comRepos.findByEvenement(e);
 	}
 	
