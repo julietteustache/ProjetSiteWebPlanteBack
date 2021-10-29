@@ -22,5 +22,4 @@ public class Evenement {
 	private User organisateur;
 	@ManyToOne
 	private Adresse adresse;
-	
 }
