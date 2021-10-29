@@ -13,14 +13,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@IdClass(EvenementUserConstraint.class)
 @NoArgsConstructor @AllArgsConstructor @Data
-public class Participants implements Serializable {
-
+@IdClass(EvenementUserConstraint.class)
+public class Participants implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@ManyToOne
 	private Evenement evenement;
-	
 	@Id
 	@OneToMany
 	private User participant;

@@ -8,15 +8,18 @@ import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Entity
 @IdClass(AnnonceUserConstraint.class)
-@NoArgsConstructor @AllArgsConstructor @Data
+
 public class Commande implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@ManyToOne
 	private User user;
@@ -25,5 +28,7 @@ public class Commande implements Serializable{
 	@OneToOne
 	private Annonce annonce;
 	
-	private int quantite;
+private int quantite;
+
+	
 }
