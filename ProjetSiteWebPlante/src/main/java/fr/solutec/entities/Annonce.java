@@ -20,8 +20,6 @@ public class Annonce {
 	private Plante plante;
 	@OneToMany
 	private User user;
-	
-public Annonce() {}
 
 
 }
