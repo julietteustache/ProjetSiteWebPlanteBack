@@ -10,10 +10,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.solutec.entities.Adresse;
 import fr.solutec.entities.Annonce;
+import fr.solutec.entities.Evenement;
 import fr.solutec.entities.Plante;
 import fr.solutec.entities.User;
 import fr.solutec.repository.AdresseRepository;
 import fr.solutec.repository.AnnonceRepository;
+import fr.solutec.repository.EvenementRepository;
 import fr.solutec.repository.PlanteRepository;
 import fr.solutec.repository.UserRepository;
 
@@ -27,6 +29,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	UserRepository userRepos;
 	@Autowired
 	AdresseRepository adresseRepos;
+	@Autowired
+	EvenementRepository evenementRepos;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
@@ -73,8 +77,14 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
 		annonceRepos.save(an4);
 
-
-		
+		Evenement e1=new Evenement(null,"Bouturage","Apprendre le bouturage",10,null,null);
+		evenementRepos.save(e1);
+		Evenement e2=new Evenement(null,"Greffe","Apprendre la greffe",6,null,null);
+		evenementRepos.save(e2);
+		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis",5,null,null);
+		evenementRepos.save(e3);
+		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers",20,null,null);
+		evenementRepos.save(e4);
 	}
 	
 	
