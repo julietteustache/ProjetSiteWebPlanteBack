@@ -9,6 +9,6 @@ public class AnnonceUserConstraint implements Serializable{
 	private Long idUser;
 	
 	public AnnonceUserConstraint() {
-//création du couple de clé primaire		
+//création du couple de clé primaire	
 	}
 }
