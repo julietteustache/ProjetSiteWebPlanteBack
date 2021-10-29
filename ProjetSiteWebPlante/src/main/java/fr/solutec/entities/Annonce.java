@@ -20,11 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor @Data
 public class Annonce {
 	@Id @GeneratedValue
-
-	private Long idUser;
-
 	private Long idAnnonce;
-
 	private int stock;
 	private String type;
 	private String description;

@@ -24,9 +24,6 @@ public class Message {
 	private User expediteur;
 	
 
-	@OneToOne
-
 	@ManyToOne
-
 	private User destinataire;
 }

@@ -18,9 +18,6 @@ import lombok.Setter;
 @Entity
 @IdClass(AnnonceUserConstraint.class)
 
-
-
-
 @NoArgsConstructor @AllArgsConstructor @Data
 
 public class Commande implements Serializable{
