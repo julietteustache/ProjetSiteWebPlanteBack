@@ -3,6 +3,7 @@ package fr.solutec.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -17,9 +18,8 @@ public class Evenement {
 	private String titre;
 	private String description;
 	private int NbParticipants;
-	@OneToOne
+	@ManyToOne
 	private User organisateur;
-	@OneToOne
+	@ManyToOne
 	private Adresse adresse;
-	
 }

@@ -5,8 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +20,11 @@ import lombok.Setter;
 @NoArgsConstructor @AllArgsConstructor @Data
 public class Commande implements Serializable{
 	
+	/**
+	 * 
+	 */
+
+
 	@Id
 	private Long idUser;
 
