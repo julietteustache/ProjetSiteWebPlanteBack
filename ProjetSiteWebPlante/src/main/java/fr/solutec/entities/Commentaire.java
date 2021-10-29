@@ -1,10 +1,12 @@
 package fr.solutec.entities;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import lombok.*;
+@Entity
 
 @AllArgsConstructor @NoArgsConstructor @Data
 public class Commentaire {
