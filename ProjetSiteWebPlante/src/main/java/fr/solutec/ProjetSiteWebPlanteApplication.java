@@ -1,5 +1,6 @@
 package fr.solutec;
 
+import org.hibernate.engine.transaction.jta.platform.internal.SynchronizationRegistryBasedSynchronizationStrategy;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,7 @@ public class ProjetSiteWebPlanteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
+		System.out.println("Commande terminée");
 	}
 
 }
