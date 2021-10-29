@@ -4,14 +4,18 @@ import java.io.Serializable;
 
 public class EvenementUserConstraint implements Serializable{
 	
+
 	/**
 	 * 
 	 */
 	
 
-	private Long evenement;
+
+
+	private Long idEvenement;
+
 	
-	private Long user;
+	private Long idUser;
 	
 	public EvenementUserConstraint() {
 //création du couple de clé primaire		

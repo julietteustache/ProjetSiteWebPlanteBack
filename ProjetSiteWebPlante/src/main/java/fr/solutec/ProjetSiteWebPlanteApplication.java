@@ -8,6 +8,7 @@ public class ProjetSiteWebPlanteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
+		System.out.println("Commande terminée");
 	}
 
 }

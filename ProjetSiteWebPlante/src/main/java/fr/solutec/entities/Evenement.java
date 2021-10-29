@@ -13,7 +13,7 @@ import lombok.Data;
 @AllArgsConstructor @Data
 public class Evenement {
 	@Id @GeneratedValue
-	private Long id;
+	private Long idEvenement;
 	private String titre;
 	private String description;
 	private int NbParticipants;
