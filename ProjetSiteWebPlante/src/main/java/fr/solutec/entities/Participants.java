@@ -14,20 +14,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
-@IdClass(EvenementUserConstraint.class)
-@NoArgsConstructor @AllArgsConstructor @Data
-public class Participants implements Serializable {
 
+
+
+
+
+@NoArgsConstructor @AllArgsConstructor @Data
+@IdClass(EvenementUserConstraint.class)
+public class Participants implements Serializable{
+	
 	/**
 	 * 
 	 */
-	
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	private Long idEvenement;
 	
+
 	@Id
 	private Long idUser;
 }
