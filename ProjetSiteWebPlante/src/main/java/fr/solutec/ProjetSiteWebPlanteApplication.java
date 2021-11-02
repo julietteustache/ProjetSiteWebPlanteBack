@@ -46,7 +46,6 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		
 		Plante p1=new Plante(null, "rose", "rose", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
 		planteRepos.save(p1);
-		
 		Plante p2=new Plante(null, "bonsai", "bonsai", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
 		planteRepos.save(p2);
 		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil");
@@ -104,10 +103,4 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		comRepos.save(c6);
 		
 	}
-	
-	
-
-	
-	
-
 }
