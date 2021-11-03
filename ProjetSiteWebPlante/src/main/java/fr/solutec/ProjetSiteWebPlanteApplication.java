@@ -44,14 +44,18 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Plante p1=new Plante(null, "rose", "rose", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
+		Plante p1=new Plante(null, "fleur", "", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
 		planteRepos.save(p1);
-		Plante p2=new Plante(null, "bonsai", "bonsai", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
+		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
 		planteRepos.save(p2);
 		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil");
 		planteRepos.save(p3);
-		Plante p4=new Plante(null, "plante", "aromatique", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		Plante p4=new Plante(null, "aromatique", "", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
 		planteRepos.save(p4);
+		Plante p5=new Plante(null, "aromatique", "", "menthe", "La menthe est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		planteRepos.save(p5);
+		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre");
+		planteRepos.save(p6);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
 		adresseRepos.save(a1);
