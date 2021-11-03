@@ -56,7 +56,7 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		planteRepos.save(p5);
 		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre");
 		planteRepos.save(p6);
-		Plante p7=new Plante(null, "fruit", "", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil");
+		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil");
 		planteRepos.save(p7);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
