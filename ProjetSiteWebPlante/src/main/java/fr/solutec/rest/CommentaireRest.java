@@ -3,6 +3,7 @@ package fr.solutec.rest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,18 +21,18 @@ public class CommentaireRest {
 		return comRepos.save(c);
 	}
 	
-	@GetMapping("getcomplante")
-	public Iterable<Commentaire> getComPlante(Plante p) {
-		return comRepos.findByPlante(p);
+	@GetMapping("getcomplante/{idPlante}")
+	public Iterable<Commentaire> getComPlante(@PathVariable Long idPlante) {
+		return comRepos.findByPlanteIdPlante(idPlante);
 	}
 	
-	@GetMapping("getcomannonce")
-	public Iterable<Commentaire> getComAnnonce(Annonce a) {
+	@PostMapping("getcomannonce")
+	public Iterable<Commentaire> getComAnnonce(@RequestBody Annonce a) {
 		return comRepos.findByAnnonce(a);
 	}
 	
-	@GetMapping("getcomevt")
-	public Iterable<Commentaire> getComEvt(Evenement e) {
+	@PostMapping("getcomevt")
+	public Iterable<Commentaire> getComEvt(@RequestBody Evenement e) {
 		return comRepos.findByEvenement(e);
 	}
 	

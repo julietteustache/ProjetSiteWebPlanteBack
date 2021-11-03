@@ -29,6 +29,11 @@ public class PlanteRest {
 		return p;
 	}
 	
+	@GetMapping("plante/{idPlante}") 
+		public Plante getPlanteId(@PathVariable Long idPlante, Plante p) {
+			return planteRepos.findByIdPlante(idPlante);
+		}
+	
 	@PostMapping("creerplante")
 	public Plante savePlante(@RequestBody Plante p) {
 		return planteRepos.save(p);
@@ -38,6 +43,8 @@ public class PlanteRest {
 	public Plante modifPlante(@PathVariable Long idPlante, @RequestBody Plante p) {
 		return planteRepos.save(p);
 	}
+	
+	
 	
 
 }

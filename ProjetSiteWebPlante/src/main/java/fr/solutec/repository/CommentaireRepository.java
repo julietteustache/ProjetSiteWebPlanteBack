@@ -12,6 +12,8 @@ public interface CommentaireRepository extends CrudRepository<Commentaire, Long>
 	
 	public Iterable<Commentaire> findByEvenement(Evenement e);
 	
+	public Iterable<Commentaire> findByPlanteIdPlante(Long idPlante);
+	
 	
 
 }
