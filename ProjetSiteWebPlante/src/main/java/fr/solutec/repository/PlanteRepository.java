@@ -8,5 +8,5 @@ public interface PlanteRepository extends CrudRepository<Plante, Long>{
 	
 	public Iterable<Plante> findByEspece(String espece);
 	
-
+	public Plante findByIdPlante (Long id);
 }

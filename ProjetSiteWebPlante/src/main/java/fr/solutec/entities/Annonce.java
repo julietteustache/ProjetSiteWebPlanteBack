@@ -3,7 +3,12 @@ package fr.solutec.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+
 import javax.persistence.ManyToOne;
+
+
+
 
 
 import lombok.AllArgsConstructor;
@@ -12,18 +17,24 @@ import lombok.NoArgsConstructor;
 
 @Entity
 
+
 @AllArgsConstructor @NoArgsConstructor @Data
+
+
+
 public class Annonce {
 	@Id @GeneratedValue
 	private Long idAnnonce;
 	private int stock;
 	private String type;
 	private String description;
-	
-	@ManyToOne
+    @ManyToOne
 	private Plante plante;
 	@ManyToOne
 	private User user;
+
+
+
 
 
 }
