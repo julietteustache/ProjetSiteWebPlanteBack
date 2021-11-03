@@ -49,11 +49,11 @@ public class User {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-	public String getStatue() {
-		return statue;
+	public String getStatut() {
+		return statut;
 	}
-	public void setStatue(String statue) {
-		this.statue = statue;
+	public void setStatue(String statut) {
+		this.statut = statut;
 	}
 	public Long getScore() {
 		return score;
@@ -73,7 +73,7 @@ public class User {
 	private String prenom;
 	private String login;
 	private String mdp;
-	private String statue;
+	private String statut;
 	private Long score;
 	
 	@ManyToOne
