@@ -80,13 +80,13 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
 		annonceRepos.save(an4);
 
-		Evenement e1=new Evenement(null,"Bouturage","Apprendre le bouturage",10,null,null);
+		Evenement e1=new Evenement(null,"Bouturage","Apprendre le bouturage",10,null,a1);
 		evenementRepos.save(e1);
-		Evenement e2=new Evenement(null,"Greffe","Apprendre la greffe",6,null,null);
+		Evenement e2=new Evenement(null,"Greffe","Apprendre la greffe",6,null,a2);
 		evenementRepos.save(e2);
-		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis",5,null,null);
+		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis",5,null,a3);
 		evenementRepos.save(e3);
-		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers",20,null,null);
+		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers",20,null,a4);
 		evenementRepos.save(e4);
 		
 		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null);

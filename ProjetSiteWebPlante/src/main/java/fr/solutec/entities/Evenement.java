@@ -12,7 +12,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 
+
 @AllArgsConstructor @Data @NoArgsConstructor
+
 public class Evenement {
 	@Id @GeneratedValue
 	private Long idEvenement;
