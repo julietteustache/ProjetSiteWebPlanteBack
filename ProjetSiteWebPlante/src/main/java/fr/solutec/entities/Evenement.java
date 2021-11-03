@@ -8,10 +8,11 @@ import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 
-@AllArgsConstructor @Data
+@NoArgsConstructor @AllArgsConstructor @Data
 public class Evenement {
 	@Id @GeneratedValue
 	private Long idEvenement;
