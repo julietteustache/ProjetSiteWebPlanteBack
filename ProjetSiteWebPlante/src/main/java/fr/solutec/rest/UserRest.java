@@ -1,5 +1,7 @@
 package fr.solutec.rest;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -19,19 +21,14 @@ import fr.solutec.entities.User;
 import fr.solutec.repository.UserRepository;
 
 
-
-
-
-
 @RestController @CrossOrigin("*")
 public class UserRest {
 	@Autowired
 	private UserRepository userRepos;
 	
-	@PostMapping("user")
-	public Iterable<User> rechercheUser(@RequestBody User u) {
-		Iterable<User> p=userRepos.findByLogin(u.getLogin());
-		return p;
+	@PostMapping("connexion")
+	public Optional<User> rechercheUser(@RequestBody User u) {
+		return userRepos.findByLoginAndMdp(u.getLogin(), u.getMdp());
 	}
 	
 	@GetMapping("user")
@@ -47,6 +44,7 @@ public class UserRest {
 	
 	@PutMapping("modifuser/{idUser}")
 	public User modifUser(@PathVariable Long idUser, @RequestBody User p) {
+		p.setIdUser(idUser);
 		return userRepos.save(p);
 
 	}

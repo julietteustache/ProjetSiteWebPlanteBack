@@ -44,14 +44,20 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Plante p1=new Plante(null, "rose", "rose", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
+		Plante p1=new Plante(null, "fleur", "", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
 		planteRepos.save(p1);
-		Plante p2=new Plante(null, "bonsai", "bonsai", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
+		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
 		planteRepos.save(p2);
 		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil");
 		planteRepos.save(p3);
-		Plante p4=new Plante(null, "plante", "aromatique", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		Plante p4=new Plante(null, "aromatique", "", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
 		planteRepos.save(p4);
+		Plante p5=new Plante(null, "aromatique", "", "menthe", "La menthe est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		planteRepos.save(p5);
+		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre");
+		planteRepos.save(p6);
+		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil");
+		planteRepos.save(p7);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
 		adresseRepos.save(a1);
@@ -80,13 +86,13 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
 		annonceRepos.save(an4);
 
-		Evenement e1=new Evenement(null,"Bouturage","Apprendre le bouturage",10,null,a1);
+		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,null,a1);
 		evenementRepos.save(e1);
-		Evenement e2=new Evenement(null,"Greffe","Apprendre la greffe",6,null,a2);
+		Evenement e2=new Evenement(null,"Greffe de pommier","Apprendre la greffe de pommier. Février est idéal pour greffer les pommiers, nous essayerons sur un pommier melrose.Prenez un sécateur",6,null,a2);
 		evenementRepos.save(e2);
-		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis",5,null,a3);
+		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis, cela peut être compliqué. Je propose un atlier pour bien savoir planter les radis en terre ou en jardinière",5,null,a3);
 		evenementRepos.save(e3);
-		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers",20,null,a4);
+		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers. Les rosiers se taille en février et je souhaite partage mes connaissances en taille",20,null,a4);
 		evenementRepos.save(e4);
 		
 		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null);

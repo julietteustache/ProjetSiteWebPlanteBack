@@ -41,8 +41,20 @@ public class PlanteRest {
 	
 	@PutMapping("modifplante/{idPlante}")
 	public Plante modifPlante(@PathVariable Long idPlante, @RequestBody Plante p) {
+		p.setIdPlante(idPlante);
 		return planteRepos.save(p);
 	}
+	
+	@GetMapping("plante/categorie/{categorie}")
+	public Iterable<Plante> getPlanteCategorie(@PathVariable String categorie) {
+		return planteRepos.findByCategorie(categorie);
+	}
+	/*
+	@GetMapping("plante/categories")
+	public Iterable<Plante> getCategories(){
+		return planteRepos.findDistinctCategorie();
+	}
+	*/
 	
 	
 	

@@ -1,5 +1,6 @@
 package fr.solutec.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,6 +20,7 @@ public class Evenement {
 	@Id @GeneratedValue
 	private Long idEvenement;
 	private String titre;
+	@Column(columnDefinition = "LONGTEXT")
 	private String description;
 	private int NbParticipants;
 	@ManyToOne

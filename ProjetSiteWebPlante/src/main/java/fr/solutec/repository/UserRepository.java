@@ -1,11 +1,13 @@
 package fr.solutec.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 
 import fr.solutec.entities.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 	
-	public Iterable<User> findByLogin(String login);
+	public Optional<User> findByLoginAndMdp(String login, String mdp);
 
 }
