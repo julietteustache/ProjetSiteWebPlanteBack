@@ -8,6 +8,8 @@ import lombok.Data;
 @AllArgsConstructor @Data
 public class AnnonceUserConstraint implements Serializable{
 
+
+
 	/**
 	 * 
 	 */
@@ -15,6 +17,7 @@ public class AnnonceUserConstraint implements Serializable{
 
 
 	private static final long serialVersionUID = 1L;
+
 
 
 
@@ -26,6 +29,8 @@ public class AnnonceUserConstraint implements Serializable{
 	public AnnonceUserConstraint() {
 //création du couple de clé primaire	
 	}
+
+	
 
 
 }

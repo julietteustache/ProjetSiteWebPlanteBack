@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 import javax.persistence.ManyToOne;
 
-import javax.persistence.ManyToOne;
+
 
 
 
@@ -17,7 +17,11 @@ import lombok.NoArgsConstructor;
 
 @Entity
 
-@NoArgsConstructor @AllArgsConstructor @Data
+
+@AllArgsConstructor @NoArgsConstructor @Data
+
+
+
 public class Annonce {
 	@Id @GeneratedValue
 	private Long idAnnonce;
