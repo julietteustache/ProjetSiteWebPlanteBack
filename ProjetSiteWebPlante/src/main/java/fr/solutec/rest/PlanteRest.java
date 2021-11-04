@@ -41,6 +41,7 @@ public class PlanteRest {
 	
 	@PutMapping("modifplante/{idPlante}")
 	public Plante modifPlante(@PathVariable Long idPlante, @RequestBody Plante p) {
+		p.setIdPlante(idPlante);
 		return planteRepos.save(p);
 	}
 	
