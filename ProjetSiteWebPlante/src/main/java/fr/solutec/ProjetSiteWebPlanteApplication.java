@@ -68,13 +68,13 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Adresse a4=new Adresse(null,"22 rue Lahouze", 64100,"Anglet");
 		adresseRepos.save(a4);
 		
-		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",null,a3);
+		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",Long.parseLong("0"),a3);
 		userRepos.save(u1);
-		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","débutant",null,a2);
+		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","débutant",Long.parseLong("0") ,a2);
 		userRepos.save(u2);
-		User u3=new User(null, "Gallon", "Marie-Rose", "mrgallon","maro","débutant",null,a1);
+		User u3=new User(null, "Gallon", "Marie-Rose", "mrgallon","maro","débutant",Long.parseLong("0"),a1);
 		userRepos.save(u3);
-		User u4=new User(null, "Msaidie", "Zaher", "mszaher","zaza","débutant",null,a4);
+		User u4=new User(null, "Msaidie", "Zaher", "mszaher","zaza","débutant",Long.parseLong("0"),a4);
 		userRepos.save(u4);
 		
 		Annonce an1=new Annonce(null,3,"bouture","donne 3 bouture de bonsai",p2,u1);
