@@ -47,6 +47,7 @@ public class UserRest {
 	
 	@PutMapping("modifuser/{idUser}")
 	public User modifUser(@PathVariable Long idUser, @RequestBody User p) {
+		p.setIdUser(idUser);
 		return userRepos.save(p);
 
 	}
