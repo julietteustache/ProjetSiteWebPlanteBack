@@ -44,6 +44,17 @@ public class PlanteRest {
 		return planteRepos.save(p);
 	}
 	
+	@GetMapping("plante/categorie/{categorie}")
+	public Iterable<Plante> getPlanteCategorie(@PathVariable String categorie) {
+		return planteRepos.findByCategorie(categorie);
+	}
+	/*
+	@GetMapping("plante/categories")
+	public Iterable<Plante> getCategories(){
+		return planteRepos.findDistinctCategorie();
+	}
+	*/
+	
 	
 	
 
