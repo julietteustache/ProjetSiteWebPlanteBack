@@ -1,6 +1,8 @@
 package fr.solutec.rest;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +17,8 @@ public class MessageRest {
 	@Autowired
 	private MessageRepository messageRepos;
 	@GetMapping("message")
-	public Optional <Message> getMessOptional(@RequestBody User expediteur) {
-		return messageRepos.findByExpediteur(expediteur);
+	public Stream <Message> getMess(@RequestBody User expediteur,@RequestBody User destinataire) {
+		return Stream.concat(messageRepos.findByExpediteur(expediteur),messageRepos.findByDestinataire(destinataire));
 	}
 
 }
