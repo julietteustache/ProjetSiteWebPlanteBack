@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,6 +50,12 @@ public class AnnonceRest {
 	@GetMapping("annonce_type/{type}") //avoir des données
 	public List<Annonce> getAnnonceByType(@PathVariable String type){
 		return annonceRepos.findByType(type);
+	}
+	
+	@PutMapping("annonce/{stock}") //modifier un objet  --> considere qu'on a le user complet a modifer 
+	public Annonce modifAnnonce(@PathVariable int stock, @RequestBody Annonce a) {
+		a.setStock(stock); //permet de fixer l'id du user pour ne pas avoir à le réecrire
+		return annonceRepos.save(a);
 	}
 	
 	
