@@ -26,8 +26,9 @@ public class EvenementRest {
 	public Iterable<Evenement> getAllEvenement(){ // iterable un peu comme une liste avc fonctionnalité en +
 		return EvenRepos.findAll();}
 		
-	@PostMapping("insertEvent")
-	public Evenement saveEvenement(@RequestBody Evenement e) {
+	@PostMapping("insertEvent/{organisateur}")
+	public Evenement saveEvenement(@PathVariable User organisateur,@RequestBody Evenement e) {
+		e.setOrganisateur(organisateur);
 		return EvenRepos.save(e);}
 	
 	@PutMapping("event/{Nb}") //modifier un objet  --> considere qu'on a le user complet a modifer 
