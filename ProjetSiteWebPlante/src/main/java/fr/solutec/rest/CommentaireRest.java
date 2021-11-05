@@ -26,6 +26,11 @@ public class CommentaireRest {
 		return comRepos.findByPlanteIdPlante(idPlante);
 	}
 	
+	@GetMapping("getcomtechnique/{idTechnique}")
+	public Iterable<Commentaire> getComTechnique(@PathVariable Long idTechnique) {
+		return comRepos.findByTechniqueIdTechnique(idTechnique);
+	}
+	
 	@PostMapping("getcomannonce")
 	public Iterable<Commentaire> getComAnnonce(@RequestBody Annonce a) {
 		return comRepos.findByAnnonce(a);

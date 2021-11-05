@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.solutec.entities.Annonce;
-
+import fr.solutec.entities.Evenement;
 import fr.solutec.repository.AnnonceRepository;
 @RestController @CrossOrigin("*")
 
@@ -52,7 +52,7 @@ public class AnnonceRest {
 	public List<Annonce> getAnnonceByType(@PathVariable String type){
 		return annonceRepos.findByType(type);
 	}
-	
+
 	@PutMapping("annonce/{stock}") //modifier un objet  --> considere qu'on a le user complet a modifer 
 	public Annonce modifAnnonce(@PathVariable int stock, @RequestBody Annonce a) {
 		a.setStock(stock); //permet de fixer l'id du user pour ne pas avoir à le réecrire
@@ -70,7 +70,24 @@ public class AnnonceRest {
 		else
 		{
 			return false;
+		}}
+
+	@GetMapping("rechercheA")
+	public Annonce getIdEvenementMax() {
+		int a =0;
+		Long idmax=Long.valueOf(a);
+		Annonce annonce1=new Annonce();
+		Iterable<Annonce> e = annonceRepos.findAll();
+		for (Annonce annonce : e) {
+			Long id=annonce.getIdAnnonce();
+			if (id>idmax) {
+				idmax=id;
+				annonce1=annonce;
+			}
 		}
+		
+		return annonce1;
+
 	}
 	
 	

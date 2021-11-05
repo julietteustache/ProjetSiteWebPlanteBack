@@ -26,18 +26,36 @@ public class EvenementRest {
 	public Iterable<Evenement> getAllEvenement(){ // iterable un peu comme une liste avc fonctionnalité en +
 		return EvenRepos.findAll();}
 		
-	@PostMapping("insertEvent")
-	public Evenement saveEvenement(@RequestBody Evenement e) {
+	@PostMapping("insertEvent/{organisateur}")
+	public Evenement saveEvenement(@PathVariable User organisateur,@RequestBody Evenement e) {
+		e.setOrganisateur(organisateur);
 		return EvenRepos.save(e);}
 	
-	@PutMapping("event/{Nb}") //modifier un objet  --> considere qu'on a le user complet a modifer 
-	public Evenement modifEvent(@PathVariable int Nb, @RequestBody Evenement e) {
-		e.setNbParticipants(Nb); //permet de fixer l'id du user pour ne pas avoir à le réecrire
+	@PutMapping("event/{id}") //modifier un objet  --> considere qu'on a le user complet a modifer 
+	public Evenement modifEvent(@PathVariable Long id, @RequestBody Evenement e) {
+		e.setIdEvenement(id); //permet de fixer l'id du user pour ne pas avoir à le réecrire
 		return EvenRepos.save(e);
 	}
 	
 	@GetMapping("eventville/{ville}")
 	public List<Evenement>getByVille(@PathVariable String ville){
-		return EvenRepos.findByAdresseVille(ville);
+		return EvenRepos.findByAdresseVille(ville);}
+		
+	@GetMapping("recherche")
+	public Evenement getIdEvenementMax() {
+		int a =0;
+		Long idmax=Long.valueOf(a);
+		Evenement Evenement1=new Evenement();
+		Iterable<Evenement> e = EvenRepos.findAll();
+		for (Evenement evenement : e) {
+			Long id=evenement.getIdEvenement();
+			if (id>idmax) {
+				idmax=id;
+				Evenement1=evenement;
+			}
+		}
+		
+		return Evenement1;
+	}
 	
-}}
+}

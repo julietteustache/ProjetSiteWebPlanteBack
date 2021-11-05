@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.solutec.entities.Evenement;
 import fr.solutec.entities.Plante;
 import fr.solutec.repository.PlanteRepository;
 
@@ -57,7 +58,22 @@ public class PlanteRest {
 		return planteRepos.findDistinctCategorie();
 	}
 	*/
-	
+	@GetMapping("rechercheP")
+	public Plante getIdPlanteMax() {
+		int a =0;
+		Long idmax=Long.valueOf(a);
+		Plante plante1=new Plante();
+		Iterable<Plante> p = planteRepos.findAll();
+		for (Plante plante : p) {
+			Long id=plante.getIdPlante();
+			if (id>idmax) {
+				idmax=id;
+				plante1=plante;
+			}
+		}
+		
+		return plante1;
+	}
 	
 	
 

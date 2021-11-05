@@ -22,4 +22,6 @@ public class Commentaire {
 	Annonce annonce;
 	@ManyToOne
 	Evenement evenement;
+	@ManyToOne
+	Technique technique;
 }

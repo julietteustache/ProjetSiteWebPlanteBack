@@ -14,9 +14,11 @@ public interface PlanteRepository extends CrudRepository<Plante, Long>{
 	
 	public Iterable<Plante> findByCategorie(String categorie);
 
+
 	
-	
+
 /*
-	public List<String> findDistinctCategorie();
+	public List<String> findCategorie();
 */
+
 }
