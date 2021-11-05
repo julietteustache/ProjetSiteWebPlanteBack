@@ -94,6 +94,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		evenementRepos.save(e3);
 		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers. Les rosiers se taille en février et je souhaite partage mes connaissances en taille",20,null,a4);
 		evenementRepos.save(e4);
+		Evenement e5=new Evenement(null,"Planter des patates","Il y a certaines techniques à savoir pour planter des pommes de terre en permaculture. Nous allons voir la technique des buttes",6,null,a4);
+		evenementRepos.save(e5);
 		
 		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null);
 		comRepos.save(c1);
