@@ -48,8 +48,8 @@ public class UserRest {
 		return userRepos.save(p);
 
 	}
-	@PutMapping("score/{score}") //modifier un objet  --> considere qu'on a le user complet a modifer 
+	/*@PutMapping("score/{score}") //modifier un objet  --> considere qu'on a le user complet a modifer 
 	public User modifScore(@PathVariable Long score, @RequestBody User u) {
 		u.setScore(score); //permet de fixer l'id du user pour ne pas avoir à le réecrire
 		return userRepos.save(u);
-}}
+}*/}
