@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,8 @@ public class Technique {
 	private String nom;
 	@Column(columnDefinition = "LONGTEXT")
 	private String description;
+	
+	@Lob
+	private byte[] image;
 
 }

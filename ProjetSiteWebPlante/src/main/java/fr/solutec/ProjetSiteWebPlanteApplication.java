@@ -48,19 +48,19 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Plante p1=new Plante(null, "fleur", "", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil");
+		Plante p1=new Plante(null, "fleur", "", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil", null);
 		planteRepos.save(p1);
-		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre");
+		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre", null);
 		planteRepos.save(p2);
-		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil");
+		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil", null);
 		planteRepos.save(p3);
-		Plante p4=new Plante(null, "aromatique", "", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		Plante p4=new Plante(null, "aromatique", "", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil", null);
 		planteRepos.save(p4);
-		Plante p5=new Plante(null, "aromatique", "", "menthe", "La menthe est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil");
+		Plante p5=new Plante(null, "aromatique", "", "menthe", "La menthe est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil", null);
 		planteRepos.save(p5);
-		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre");
+		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre", null);
 		planteRepos.save(p6);
-		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil");
+		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil", null);
 		planteRepos.save(p7);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
@@ -114,7 +114,7 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		comRepos.save(c4);
 		
 		
-		Technique t1=new Technique(null, "semis", "Le semis est une opération culturale qui consiste à mettre en terre les graines ou semences que ce soit dans un champ ou une surface de petite dimension. Le semis peut se faire à la main, ou de manière mécanisée à l'aide de semoirs.");
+		Technique t1=new Technique(null, "semis", "Le semis est une opération culturale qui consiste à mettre en terre les graines ou semences que ce soit dans un champ ou une surface de petite dimension. Le semis peut se faire à la main, ou de manière mécanisée à l'aide de semoirs.", null);
 		techRepos.save(t1);
 		Technique t2=new Technique(null, "bouturage", "Le bouturage est un mode de multiplication végétative de certaines plantes, consistant à donner naissance à un nouvel individu à partir d'un organe ou d'un fragment d'organe isolé (morceau de rameau, feuille, racine, tige, écaille de bulbe).\r\n"
 				+ "\r\n"
@@ -122,11 +122,11 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 				+ "\r\n"
 				+ "Le bouturage est une forme de clonage : la bouture est génétiquement identique à la plante mère, puisqu'il s'agit tout simplement d'un morceau de cette plante. La « prise » du bouturage se fait par dédifférenciation cellulaire au niveau du méristème.\r\n"
 				+ "\r\n"
-				+ "En tant que mode de reproduction, le bouturage peut être naturel ou artificiellement provoqué (par les jardiniers amateurs ou en pépinière). Dans ce dernier cas, on dit qu'on emploie la « technique » du bouturage pour produire de nouveaux plants, soit parce que c'est un mode opératoire simple et viable pour la plante qu'on cherche à reproduire, soit parce qu'on a spécifiquement pour objectif de réaliser un clonage (pour assurer la stabilité des caractères de la variété à reproduire).");
+				+ "En tant que mode de reproduction, le bouturage peut être naturel ou artificiellement provoqué (par les jardiniers amateurs ou en pépinière). Dans ce dernier cas, on dit qu'on emploie la « technique » du bouturage pour produire de nouveaux plants, soit parce que c'est un mode opératoire simple et viable pour la plante qu'on cherche à reproduire, soit parce qu'on a spécifiquement pour objectif de réaliser un clonage (pour assurer la stabilité des caractères de la variété à reproduire).", null);
 		techRepos.save(t2);
-		Technique t3=new Technique(null, "greffe", "En agriculture, le greffage est un mode de reproduction végétative qui consiste à implanter dans les tissus d'une plante (nommée « porte-greffe ») un bourgeon ou un fragment quelconque (nommé « greffon »), prélevé sur une autre plante ou de la même plante, pour que celui-ci continue à croître en faisant corps avec la première. La greffe est le résultat de cette opération.");
+		Technique t3=new Technique(null, "greffe", "En agriculture, le greffage est un mode de reproduction végétative qui consiste à implanter dans les tissus d'une plante (nommée « porte-greffe ») un bourgeon ou un fragment quelconque (nommé « greffon »), prélevé sur une autre plante ou de la même plante, pour que celui-ci continue à croître en faisant corps avec la première. La greffe est le résultat de cette opération.", null);
 		techRepos.save(t3);
-		Technique t4=new Technique(null, "marcottage", "Le marcottage est une méthode de multiplication des végétaux par la rhizogenèse (développement de racines) sur une partie aérienne d'une plante mère. Certaines plantes se marcottent naturellement. En horticulture, le marcottage est souvent utilisé pour cloner les plantes ligneuses, dont le bouturage est difficile. On fait généralement le marcottage à la fin de l'été ou au début de l'automne.");
+		Technique t4=new Technique(null, "marcottage", "Le marcottage est une méthode de multiplication des végétaux par la rhizogenèse (développement de racines) sur une partie aérienne d'une plante mère. Certaines plantes se marcottent naturellement. En horticulture, le marcottage est souvent utilisé pour cloner les plantes ligneuses, dont le bouturage est difficile. On fait généralement le marcottage à la fin de l'été ou au début de l'automne.", null);
 		techRepos.save(t4);
 		
 		Commentaire c5=new Commentaire(null, "J'aime cette technique", u4, null, null, null, t2);
