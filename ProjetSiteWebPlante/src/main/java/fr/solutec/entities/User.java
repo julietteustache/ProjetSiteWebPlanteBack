@@ -61,12 +61,12 @@ public class User {
 		this.login = login;
 	}
 
-	@JsonIgnore
+	
 	public String getMdp() {
 		return mdp;
 	}
 
-	@JsonSetter
+	
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
