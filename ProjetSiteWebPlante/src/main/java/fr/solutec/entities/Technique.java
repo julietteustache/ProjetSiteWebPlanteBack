@@ -8,18 +8,14 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Entity
-@NoArgsConstructor @AllArgsConstructor @Data
-public class Plante {
+@NoArgsConstructor @ AllArgsConstructor @Data
+public class Technique {
 	@Id @GeneratedValue
-	Long idPlante;
-	String categorie;
-	String sousCategorie;
-	String espece;
+	private Long idTechnique;
+	private String nom;
 	@Column(columnDefinition = "LONGTEXT")
-	String description;
-	int prix;
-	String calendrier;
-	int arrosage;
-	String exposition;
+	private String description;
+
 }

@@ -10,9 +10,13 @@ public interface CommentaireRepository extends CrudRepository<Commentaire, Long>
 	
 	public Iterable<Commentaire> findByAnnonce(Annonce a);
 	
+	public Iterable<Commentaire> findByTechnique(Technique t);
+	
 	public Iterable<Commentaire> findByEvenement(Evenement e);
 	
 	public Iterable<Commentaire> findByPlanteIdPlante(Long idPlante);
+	
+	public Iterable<Commentaire> findByTechniqueIdTechnique(Long idTechnique);
 	
 	
 

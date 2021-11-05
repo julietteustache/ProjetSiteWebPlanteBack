@@ -13,12 +13,14 @@ import fr.solutec.entities.Annonce;
 import fr.solutec.entities.Commentaire;
 import fr.solutec.entities.Evenement;
 import fr.solutec.entities.Plante;
+import fr.solutec.entities.Technique;
 import fr.solutec.entities.User;
 import fr.solutec.repository.AdresseRepository;
 import fr.solutec.repository.AnnonceRepository;
 import fr.solutec.repository.CommentaireRepository;
 import fr.solutec.repository.EvenementRepository;
 import fr.solutec.repository.PlanteRepository;
+import fr.solutec.repository.TechniqueRepository;
 import fr.solutec.repository.UserRepository;
 
 @SpringBootApplication
@@ -35,6 +37,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	EvenementRepository evenementRepos;
 	@Autowired
 	CommentaireRepository comRepos;
+	@Autowired
+	TechniqueRepository techRepos;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
@@ -68,7 +72,7 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Adresse a4=new Adresse(null,"22 rue Lahouze", 64100,"Anglet");
 		adresseRepos.save(a4);
 		
-		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",Long.parseLong("0"),a3);
+		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",Long.parseLong("1200"),a3);
 		userRepos.save(u1);
 		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","débutant",Long.parseLong("0") ,a2);
 		userRepos.save(u2);
@@ -97,18 +101,34 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Evenement e5=new Evenement(null,"Planter des patates","Il y a certaines techniques à savoir pour planter des pommes de terre en permaculture. Nous allons voir la technique des buttes",6,null,a4);
 		evenementRepos.save(e5);
 		
-		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null);
+		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null, null);
 		comRepos.save(c1);
-		Commentaire c2=new Commentaire(null, "Comment s'occuper des rosiers?", u4, p1, null, null);
+		Commentaire c2=new Commentaire(null, "Comment s'occuper des rosiers?", u4, p1, null, null, null);
 		comRepos.save(c2);
-		Commentaire c3=new Commentaire(null, "Je suis intéressé !", u3, null, null, e1);
+		Commentaire c3=new Commentaire(null, "Je suis intéressé !", u3, null, null, e1, null);
 		comRepos.save(c3);
-		Commentaire c4=new Commentaire(null, "Je suis intéressé aussi !", u2, null, null, e1);
+		Commentaire c4=new Commentaire(null, "Je suis intéressé aussi !", u2, null, null, e1, null);
 		comRepos.save(c4);
-		Commentaire c5=new Commentaire(null, "Les roses sont mes fleurs préférées", u4, null, an4, null);
-		comRepos.save(c5);
-		Commentaire c6=new Commentaire(null, "Les roses sont mes fleurs préférées", u3, null, an4, null);
-		comRepos.save(c6);
 		
+		
+		Technique t1=new Technique(null, "semis", "Le semis est une opération culturale qui consiste à mettre en terre les graines ou semences que ce soit dans un champ ou une surface de petite dimension. Le semis peut se faire à la main, ou de manière mécanisée à l'aide de semoirs.");
+		techRepos.save(t1);
+		Technique t2=new Technique(null, "bouturage", "Le bouturage est un mode de multiplication végétative de certaines plantes, consistant à donner naissance à un nouvel individu à partir d'un organe ou d'un fragment d'organe isolé (morceau de rameau, feuille, racine, tige, écaille de bulbe).\r\n"
+				+ "\r\n"
+				+ "Avec le bouturage, il y a d'abord séparation de l'organe végétatif, puis enracinement ; à la différence du marcottage où, cette fois, il y a enracinement puis séparation de l'organe végétatif.\r\n"
+				+ "\r\n"
+				+ "Le bouturage est une forme de clonage : la bouture est génétiquement identique à la plante mère, puisqu'il s'agit tout simplement d'un morceau de cette plante. La « prise » du bouturage se fait par dédifférenciation cellulaire au niveau du méristème.\r\n"
+				+ "\r\n"
+				+ "En tant que mode de reproduction, le bouturage peut être naturel ou artificiellement provoqué (par les jardiniers amateurs ou en pépinière). Dans ce dernier cas, on dit qu'on emploie la « technique » du bouturage pour produire de nouveaux plants, soit parce que c'est un mode opératoire simple et viable pour la plante qu'on cherche à reproduire, soit parce qu'on a spécifiquement pour objectif de réaliser un clonage (pour assurer la stabilité des caractères de la variété à reproduire).");
+		techRepos.save(t2);
+		Technique t3=new Technique(null, "greffe", "En agriculture, le greffage est un mode de reproduction végétative qui consiste à implanter dans les tissus d'une plante (nommée « porte-greffe ») un bourgeon ou un fragment quelconque (nommé « greffon »), prélevé sur une autre plante ou de la même plante, pour que celui-ci continue à croître en faisant corps avec la première. La greffe est le résultat de cette opération.");
+		techRepos.save(t3);
+		Technique t4=new Technique(null, "marcottage", "Le marcottage est une méthode de multiplication des végétaux par la rhizogenèse (développement de racines) sur une partie aérienne d'une plante mère. Certaines plantes se marcottent naturellement. En horticulture, le marcottage est souvent utilisé pour cloner les plantes ligneuses, dont le bouturage est difficile. On fait généralement le marcottage à la fin de l'été ou au début de l'automne.");
+		techRepos.save(t4);
+		
+		Commentaire c5=new Commentaire(null, "J'aime cette technique", u4, null, null, null, t2);
+		comRepos.save(c5);
+		Commentaire c6=new Commentaire(null, "Je suis fan de bouturage", u3, null, null, null, t2);
+		comRepos.save(c6);
 	}
 }
