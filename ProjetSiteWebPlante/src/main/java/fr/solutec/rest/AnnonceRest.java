@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,6 +57,20 @@ public class AnnonceRest {
 	public Annonce modifAnnonce(@PathVariable int stock, @RequestBody Annonce a) {
 		a.setStock(stock); //permet de fixer l'id du user pour ne pas avoir à le réecrire
 		return annonceRepos.save(a);
+	}
+	
+	
+	@DeleteMapping("annonce/{idAnnonce}")  
+	public boolean suppAnnonce(@PathVariable Long idAnnonce ) {
+		if(annonceRepos.findById(idAnnonce).isPresent())
+		{
+			annonceRepos.deleteById(idAnnonce);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	

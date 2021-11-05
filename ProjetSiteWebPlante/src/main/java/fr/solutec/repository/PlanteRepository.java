@@ -8,11 +8,13 @@ import fr.solutec.entities.Plante;
 
 public interface PlanteRepository extends CrudRepository<Plante, Long>{
 	
-	public Iterable<Plante> findByEspece(String espece);
+	//public Iterable<Plante> findByEspece(String espece);
 	
 	public Plante findByIdPlante (Long id);
 	
 	public Iterable<Plante> findByCategorie(String categorie);
+
+	public Plante findByEspece(String espece);
 	
 /*
 	public List<String> findDistinctCategorie();

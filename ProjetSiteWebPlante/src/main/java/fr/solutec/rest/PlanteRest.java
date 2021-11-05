@@ -17,12 +17,17 @@ public class PlanteRest {
 	@Autowired
 	private PlanteRepository planteRepos;
 	
-	@PostMapping("plante")
+	/*@PostMapping("plante")
 	public Iterable<Plante> rechercheNomPlantes(@RequestBody Plante u) {
 		Iterable<Plante> p=planteRepos.findByEspece(u.getEspece());
 		return p;
-	}
+	}*/
 	
+	@GetMapping("trouverPlante/{espece}")
+	public Plante getPlanteByEspece(@PathVariable String espece) {
+		 return planteRepos.findByEspece(espece);
+		
+	}
 	@GetMapping("plante")
 	public Iterable<Plante> getPlantes() {
 		Iterable<Plante> p=planteRepos.findAll();
