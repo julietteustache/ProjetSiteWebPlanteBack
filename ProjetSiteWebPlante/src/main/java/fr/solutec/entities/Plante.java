@@ -1,5 +1,6 @@
 package fr.solutec.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ public class Plante {
 	String categorie;
 	String sousCategorie;
 	String espece;
+	@Column(columnDefinition = "LONGTEXT")
 	String description;
 	int prix;
 	String calendrier;
