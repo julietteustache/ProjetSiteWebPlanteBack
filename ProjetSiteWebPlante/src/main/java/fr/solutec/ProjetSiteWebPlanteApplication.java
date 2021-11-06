@@ -74,8 +74,6 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		
 
 		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",Long.parseLong("1000"),a3);
-
-
 		userRepos.save(u1);
 		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","débutant",Long.parseLong("0") ,a2);
 		userRepos.save(u2);
