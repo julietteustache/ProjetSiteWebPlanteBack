@@ -19,10 +19,12 @@ public interface MessageRepository extends CrudRepository<Message, Long>{
     
     public Iterable<Message> findByExpediteur(User expediteur);
     public Iterable<Message> findByExpediteurIdUser(Long idUser);
+    public Iterable<Message> findByExpediteurIdUserOrderByDateDesc(Long idUser);
     
     
     public Iterable<Message> findByDestinataire(User destinataire);
     public Iterable<Message> findByDestinataireIdUser(Long idUser);
+    public Iterable<Message> findByDestinataireIdUserOrderByDateDesc(Long idUser);
     
     
     public Iterable<Message> findByDestinataireIdUserAndExpediteurIdUser(Long idExpediteur, Long idDestinataire);

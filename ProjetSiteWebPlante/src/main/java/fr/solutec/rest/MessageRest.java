@@ -34,12 +34,12 @@ public class MessageRest {
 	
 	@GetMapping("expediteur/{idUser}") //Tous les messages dont idUser est l'expéditeur
 	public Iterable<Message> getMsgExpediteur(@PathVariable Long idUser) {
-		return messageRepos.findByExpediteurIdUser(idUser);
+		return messageRepos.findByExpediteurIdUserOrderByDateDesc(idUser);
 	}
 	
-	@GetMapping("destinataire/{idUser}")
+	@GetMapping("destinataire/{idUser}") //Tous les messages dont idUser est le destinataire
 	public Iterable<Message> getMsgDestinataire(@PathVariable Long idUser) {
-		return messageRepos.findByDestinataireIdUser(idUser);
+		return messageRepos.findByDestinataireIdUserOrderByDateDesc(idUser);
 	}
 
 }
