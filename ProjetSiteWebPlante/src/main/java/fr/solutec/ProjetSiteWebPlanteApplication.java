@@ -1,7 +1,10 @@
 package fr.solutec;
 
 
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import org.hibernate.query.criteria.internal.expression.function.CurrentDateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
@@ -12,6 +15,7 @@ import fr.solutec.entities.Adresse;
 import fr.solutec.entities.Annonce;
 import fr.solutec.entities.Commentaire;
 import fr.solutec.entities.Evenement;
+import fr.solutec.entities.Message;
 import fr.solutec.entities.Plante;
 import fr.solutec.entities.Technique;
 import fr.solutec.entities.User;
@@ -19,6 +23,7 @@ import fr.solutec.repository.AdresseRepository;
 import fr.solutec.repository.AnnonceRepository;
 import fr.solutec.repository.CommentaireRepository;
 import fr.solutec.repository.EvenementRepository;
+import fr.solutec.repository.MessageRepository;
 import fr.solutec.repository.PlanteRepository;
 import fr.solutec.repository.TechniqueRepository;
 import fr.solutec.repository.UserRepository;
@@ -39,6 +44,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	CommentaireRepository comRepos;
 	@Autowired
 	TechniqueRepository techRepos;
+	@Autowired
+	MessageRepository msgRepos;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
@@ -131,5 +138,19 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		comRepos.save(c5);
 		Commentaire c6=new Commentaire(null, "Je suis fan de bouturage", u3, null, null, null, t2);
 		comRepos.save(c6);
+		
+		SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String Date1="2021-11-06 21:31:13";
+		Date d1=formatter.parse(Date1);
+		Message m1=new Message(null, "Salut", d1,u1, u2);
+		msgRepos.save(m1);
+		Calendar cal = Calendar.getInstance();
+		//Date d2=formatter.parse(formatter.format(cal.getTime()));
+		Date d2=cal.getTime();
+		Message m2=new Message(null, "Bonjour", d2,u3, u4);
+		msgRepos.save(m2);
+		
+		
+		
 	}
 }

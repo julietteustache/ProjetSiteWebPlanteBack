@@ -1,5 +1,9 @@
 package fr.solutec.entities;
 
+
+
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +22,8 @@ import lombok.NoArgsConstructor;
 public class Message {
 	@Id @GeneratedValue
 	private Long id_msg;
-	private Long message;
+	private String message;
+	private Date date;
 	
 	@ManyToOne
 	private User expediteur;
