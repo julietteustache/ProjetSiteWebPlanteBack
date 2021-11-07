@@ -23,6 +23,8 @@ public class Evenement {
 	@Column(columnDefinition = "LONGTEXT")
 	private String description;
 	private int NbParticipants;
+	private String date;
+	private String heure;
 	@ManyToOne
 	private User organisateur;
 	@ManyToOne

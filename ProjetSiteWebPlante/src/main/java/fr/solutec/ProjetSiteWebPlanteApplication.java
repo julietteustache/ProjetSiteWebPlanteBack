@@ -98,15 +98,15 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
 		annonceRepos.save(an4);
 
-		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,null,a1);
+		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,"10/11/2021","16h",null,a1);
 		evenementRepos.save(e1);
-		Evenement e2=new Evenement(null,"Greffe de pommier","Apprendre la greffe de pommier. Février est idéal pour greffer les pommiers, nous essayerons sur un pommier melrose.Prenez un sécateur",6,null,a2);
+		Evenement e2=new Evenement(null,"Greffe de pommier","Apprendre la greffe de pommier. Février est idéal pour greffer les pommiers, nous essayerons sur un pommier melrose.Prenez un sécateur",6,"11/12/2021","10h",null,a2);
 		evenementRepos.save(e2);
-		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis, cela peut être compliqué. Je propose un atlier pour bien savoir planter les radis en terre ou en jardinière",5,null,a3);
+		Evenement e3=new Evenement(null,"Semer radis","Faire pousser des radis, cela peut être compliqué. Je propose un atlier pour bien savoir planter les radis en terre ou en jardinière",5,"20/11/2021","18h",null,a3);
 		evenementRepos.save(e3);
-		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers. Les rosiers se taille en février et je souhaite partage mes connaissances en taille",20,null,a4);
+		Evenement e4=new Evenement(null,"Tailler les rosiers","Apprendre la taille des rosiers. Les rosiers se taille en février et je souhaite partage mes connaissances en taille",20,"17/11/2021","9h",null,a4);
 		evenementRepos.save(e4);
-		Evenement e5=new Evenement(null,"Planter des patates","Il y a certaines techniques à savoir pour planter des pommes de terre en permaculture. Nous allons voir la technique des buttes",6,null,a4);
+		Evenement e5=new Evenement(null,"Planter des patates","Il y a certaines techniques à savoir pour planter des pommes de terre en permaculture. Nous allons voir la technique des buttes",6,"10/11/2021","18h",null,a4);
 		evenementRepos.save(e5);
 		
 		Commentaire c1=new Commentaire(null, "Les roses sont mes fleurs préférées", u1, p1, null, null, null);
