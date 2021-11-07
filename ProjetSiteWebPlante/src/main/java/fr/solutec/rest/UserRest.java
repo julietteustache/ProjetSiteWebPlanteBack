@@ -52,4 +52,10 @@ public class UserRest {
 	public User modifScore(@PathVariable Long score, @RequestBody User u) {
 		u.setScore(score); //permet de fixer l'id du user pour ne pas avoir à le réecrire
 		return userRepos.save(u);
-}*/}
+}*/
+	@GetMapping("user/{nom}/{prenom}")
+	public User trvUser(@PathVariable String nom, @PathVariable String prenom) {
+		return userRepos.findByNomAndPrenom(nom, prenom);
+	}
+	
+}
