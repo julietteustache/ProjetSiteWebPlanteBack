@@ -101,7 +101,7 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		annonceRepos.save(an4);
 		Annonce an5=new Annonce(null,2,"plants","Echange plants de ciboulette contre basilic ou autres herbes aromatiques. Remise en main propre sur Paris possible !",p4,u2);
 		annonceRepos.save(an5);
-		Annonce an6=new Annonce(null,40,"graine","Donne des graines de potiron déjà germées. Je peux les remettre en main propre sur Paris ou bien les envoyer par la poste. Merci de me contacter avant de passer commande svp !",p4,u2);
+		Annonce an6=new Annonce(null,40,"graine","Donne des graines de potiron déjà germées. Je peux les remettre en main propre sur Paris ou bien les envoyer par la poste. Merci de me contacter avant de passer commande svp !",p8,u2);
 		annonceRepos.save(an6);
 
 		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,"10/11/2021","16h",null,a1);
