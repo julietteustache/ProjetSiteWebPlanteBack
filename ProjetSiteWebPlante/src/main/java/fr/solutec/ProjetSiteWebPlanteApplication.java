@@ -91,19 +91,20 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		User u4=new User(null, "Msaidie", "Zaher", "mszaher","zaza","Tulipe printanière",Long.parseLong("750"),a4);
 		userRepos.save(u4);
 		
-		Annonce an1=new Annonce(null,3,"bouture","donne 3 bouture de bonsai",p2,u1);
+		Annonce an1=new Annonce(null,3,"bouture","On m'a offert 4 magnifiques bonsais, en ayant plus que prévu, je vous propose 3 boutures afin que vous puissiez vous aussi profiter de cette magnifique plante qui égaillera votre salon j'en suis sûre!",p2,u1);
 		annonceRepos.save(an1);
-		Annonce an2=new Annonce(null,1,"Greffe","Donne 1 greffe de rosier. Remise en main propre sur Paris.",p1,u2);
+		Annonce an2=new Annonce(null,3,"plante","J'ai eu la chance de voir mes rosiers pousser manifiquement bien, je ne pensais pas en avoir autant alors je donne quelques uns de pieds, merci d'en prendre soin :)",p1,u2);
 		annonceRepos.save(an2);
-		Annonce an3=new Annonce(null,5,"graine","donne 5 graines de courgette",p3,u3);
+		Annonce an3=new Annonce(null,10,"graine","Après cette magnifique année, mes framboisiers sont arrivés à maturité, je n'en ai jamais mangé d'aussi bonnes ! Alors je veux que vous puissiez vous aussi d'en profiter, je donne donc 10 graines :)",p7,u3);
 		annonceRepos.save(an3);
-		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
+		Annonce an4=new Annonce(null,3,"plante","Je ne pensais pas que la ciboulette poussait si vite et en aussi grande quantité ! Bien que très contente de ce résultat, j'en ai bien trop pour moi seul alors je souhaite en faire profiter les autres :)   ",p4,u3);
 		annonceRepos.save(an4);
 		Annonce an5=new Annonce(null,2,"plants","Echange plants de ciboulette contre basilic ou autres herbes aromatiques. Remise en main propre sur Paris possible !",p4,u2);
 		annonceRepos.save(an5);
 		Annonce an6=new Annonce(null,40,"graine","Donne des graines de potiron déjà germées. Je peux les remettre en main propre sur Paris ou bien les envoyer par la poste. Merci de me contacter avant de passer commande svp !",p8,u2);
 		annonceRepos.save(an6);
-
+		
+		
 		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,"10/11/2021","16h",null,a1);
 		evenementRepos.save(e1);
 		Evenement e2=new Evenement(null,"Greffe de pommier","Apprendre la greffe de pommier. Février est idéal pour greffer les pommiers, nous essayerons sur un pommier melrose.Prenez un sécateur",6,"11/12/2021","10h",null,a2);
