@@ -55,21 +55,44 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Plante p1=new Plante(null, "fleur", "", "rosier", "Le rosier est une plante faisant pousser des roses", 200, "automne", 5, "soleil", null);
+		Plante p1=new Plante(null, "plante", "", "rosier", "Le Rosier, ou Églantier, est un genre de plantes, le genre Rosa de la famille des Rosaceae, originaires des régions tempérées et subtropicales de l'hémisphère nord. Ce sont des arbustes et arbrisseaux sarmenteux et épineux. Suivant les avis souvent divers des botanistes, le genre Rosa comprend de 100 à 200 espèces qui s'hybrident facilement entre elles.\r\n"
+				+ "\r\n"
+				+ "Plusieurs espèces et de nombreux cultivars, issus de mutations ou de croisements, sont cultivés comme plantes ornementales pour leurs fleurs, les roses. Celles-ci constituent la plus importante catégorie des fleurs coupées, vendues chez les fleuristes2, mais les rosiers sont aussi cultivés pour la production d'essence de parfumerie.", 200, "automne", 5, "soleil", null);
 		planteRepos.save(p1);
-		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsai est une plante ressemblant à un arbre miniature", 500, "printemps", 10, "ombre", null);
+		Plante p2=new Plante(null, "arbre", "", "bonsai", "Le bonsaï ou bonzaï, culture miniaturisée de végétaux, est un art traditionnel japonais dérivé de l'art originaire chinois du penjing. Cette pratique se retrouve également dans les cultures d'autres pays de cette région du monde comme le Vietnam ou la Corée sous l'influence chinoise.\r\n"
+				+ "\r\n"
+				+ "La plante ou l'arbre qui en est l'objet est miniaturisé par application de différentes techniques (taille des branches et racines, gestion des apports nutritifs...) et modelage de la forme (par ligature). Le but en est une recherche esthétique et la ressemblance de l'arbre avec la nature.", 500, "printemps", 10, "ombre", null);
 		planteRepos.save(p2);
-		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est un légume de la famille des cucurbitacés", 100, "printemps", 7, "soleil", null);
+		Plante p3=new Plante(null, "légume", "curcubitacé", "courgette", "La courgette est une plante herbacée de la famille des Cucurbitaceae, c'est aussi le fruit comestible de la plante du même nom.\r\n"
+				+ "\r\n"
+				+ "La courgette est un fruit courant en été, la fleur de courgette est aussi utilisée en cuisine. Les différentes variétés de courgettes sont des cultivars de l'espèce Cucurbita pepo, et de la sous-espèce Cucurbita pepo subsp. pepo dont fait partie aussi la citrouille véritable", 100, "printemps", 7, "soleil", null);
 		planteRepos.save(p3);
-		Plante p4=new Plante(null, "aromatique", "", "ciboulette", "La ciboulette est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil", null);
+		Plante p4=new Plante(null, "plante", "aromatique", "ciboulette", "La ciboulette ou civette (Allium schoenoprasum L.) est une plante aromatique de la famille des Amaryllidacées (anciennement Liliacées ou Alliacées), cultivée pour ses feuilles souvent utilisées comme condiment.\r\n"
+				+ "\r\n"
+				+ "Autres noms vernaculaires : appétit (poitevin), branlette, brelette, chiboulette. Dans d'autres langues, allemand : Schnittlauch, anglais : chives, espagnol : cebollino, italien : erba cipollina.\r\n"
+				+ "\r\n"
+				+ "La ciboulette fait partie des plantes dont la culture est recommandée dans les domaines royaux par Charlemagne dans le capitulaire De Villis (fin du viiie ou début du ixe siècle).", 50, "printemps", 10, "soleil", null);
 		planteRepos.save(p4);
-		Plante p5=new Plante(null, "aromatique", "", "menthe", "La menthe est une herbe utilisée pour aromatiser les plats", 50, "printemps", 10, "soleil", null);
+		Plante p5=new Plante(null, "plante", "aromatique", "menthe", "Les menthes forment un genre (Mentha) de plantes herbacées vivaces de la famille des Lamiacées (Labiées), sous-famille des Nepetoideae, tribu des Mentheae, sous-tribu des Menthinae. Ce genre comprend de nombreuses espèces, dont beaucoup sont cultivées comme plantes aromatiques et condimentaires, ornementales ou médicinales. Le principal producteur est le Maroc notamment pour la préparation du thé à la menthe1.\r\n"
+				+ "\r\n"
+				+ "Si les menthes sont connues et appréciées pour leurs qualités aromatiques depuis l'Antiquité, certaines ont acquis une grande valeur économique depuis quelques décennies. Des 18 espèces de menthes actuellement acceptées, seulement trois (Mentha aquatica, M. canadensis, M. spicata) et leurs hybrides (M. x gracilis, M. x piperita, M. x villosonervata) dominent le marché mondial pour la production d'huile essentielle", 50, "printemps", 10, "soleil", null);
 		planteRepos.save(p5);
-		Plante p6=new Plante(null, "aromatique", "", "basilic", "Le basilic est une plante aromatique très prisée et utilisée notamment pour le pesto. Elle est très convoitée pour son goût et sa facilité à pousser", 50, "printemps", 6, "ombre", null);
+		Plante p6=new Plante(null, "plante", "aromatique", "basilic", "Le Basilic ou Basilic romain (Ocimum basilicum L.) est une espèce de plantes herbacées thérophytes de la famille des Lamiacées (labiacées, labiées), cultivée comme plante aromatique et condimentaire. La plante est parfois appelée Basilic commun, Basilic aux sauces, Herbe royale1 ou Grand Basilic. Le Basilic commun est largement employé dans la cuisine italienne, d'autres variétés de basilic sont répandues dans certaines cuisines asiatiques : Taïwan, Thaïlande, Viêt Nam, Cambodge et Laos. Cette plante a eu plusieurs synonymes scientifiques dont Ocimum basilicum var. glabratum Benth, Ocimum basilicum var. majus Benth.\r\n"
+				+ "\r\n"
+				+ "Le mot basilic peut parfois désigner d'autres espèces appartenant au genre Ocimum dont le basilic citron (Ocimum canum L .), le basilic de Ceylan (Ocimum gratissimum) ou encore le basilic sacré (Ocimum sanctum L .)", 50, "printemps", 6, "ombre", null);
 		planteRepos.save(p6);
-		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil", null);
+		Plante p7=new Plante(null, "plante", "fruit", "framboise", "La framboise est un fruit rouge issu du framboisier (Rubus idaeus), un arbrisseau de la famille des rosacées. Selon qu'il s'agit de framboisiers sauvages ou cultivés, la framboise pèse de 4 à 10 g, mesure jusqu'à 2,5 cm et compte de 40 à 80 drupéoles. "
+				+ "\r\n Ce fruit rouge-rose est issu de la transformation de la quarantaine de minuscules carpelles d'une seule et même fleur, qui se transforment en drupéoles semi-soudées. C'est à la fois un « faux syncarpe », car les carpelles sont attachés mais non fusionnés et une « polydrupe » car chaque drupéole, remplie d'une pulpe juteuse et contenant une graine, a la même structure qu'une drupe. La face externe du fruit est recouverte de poils microscopiques, ce qui donne à la framboise son aspect velouté.\r\n"
+				+ "\r\n"
+				+ "Le framboisier forme naturellement une touffe dont les rameaux se renouvellent annuellement par émission de nouveaux rejets. La multiplication se fait par ces drageons racinés qui sont généralement plantés à l'automne.\r\n"
+				+ "\r\n"
+				+ "Sur les variétés remontantes, une première petite fructification se fait dès la première année ; mais remontantes ou non remontantes, la grande fructification se fait sur les rameaux de l'année précédente, qui après fructification, se dessèchent et meurent.\r\n"
+				+ "\r\n"
+				+ "De forme ovoïde ou conique, elle a une saveur sucrée accompagnée, selon les variétés, d'une pointe d'acidité. Fruit fragile et délicat, il est généralement présenté en barquettes pour le protéger des chocs et des manipulations.", 200, "printemps", 8, "soleil", null);
 		planteRepos.save(p7);
-		Plante p8=new Plante(null, "légume", "curcubitacé", "potiron", "Le potiron fait partie de la famille des courges et est originaire d'Amérique du Sud.", 100, "automne", 3, "soleil", null);
+		Plante p8=new Plante(null, "légume", "curcubitacé", "potiron", "Le potiron est une plante de la famille des Cucurbitacées originaire des régions tropicales d'Amérique du Sud.\r\n"
+				+ "\r\n"
+				+ "Le potiron est largement cultivé comme plante potagère pour son fruit comestible à maturité. Le terme désigne aussi ce fruit consommé comme légume. C'est l'une des cinq espèces de courges les plus couramment cultivées.", 100, "automne", 3, "soleil", null);
 		planteRepos.save(p8);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
