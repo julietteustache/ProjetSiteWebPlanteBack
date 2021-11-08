@@ -69,6 +69,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		planteRepos.save(p6);
 		Plante p7=new Plante(null, "fruit", "fruit rouge", "framboise", "La framboise est un fruit rouge délicieux", 200, "printemps", 8, "soleil", null);
 		planteRepos.save(p7);
+		Plante p8=new Plante(null, "légume", "curcubitacé", "potiron", "Le potiron fait partie de la famille des courges et est originaire d'Amérique du Sud.", 100, "automne", 3, "soleil", null);
+		planteRepos.save(p8);
 		
 		Adresse a1=new Adresse(null,"120 rue d'Assas", 75006,"Paris");
 		adresseRepos.save(a1);
@@ -91,12 +93,16 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		
 		Annonce an1=new Annonce(null,3,"bouture","donne 3 bouture de bonsai",p2,u1);
 		annonceRepos.save(an1);
-		Annonce an2=new Annonce(null,1,"greffe","donne 1 greff de rosier",p1,u2);
+		Annonce an2=new Annonce(null,1,"Greffe","Donne 1 greffe de rosier. Remise en main propre sur Paris.",p1,u2);
 		annonceRepos.save(an2);
 		Annonce an3=new Annonce(null,5,"graine","donne 5 graines de courgette",p3,u3);
 		annonceRepos.save(an3);
 		Annonce an4=new Annonce(null,2,"graine","donne 2 graines de bonsai",p2,u3);
 		annonceRepos.save(an4);
+		Annonce an5=new Annonce(null,2,"plants","Echange plants de ciboulette contre basilic ou autres herbes aromatiques. Remise en main propre sur Paris possible !",p4,u2);
+		annonceRepos.save(an5);
+		Annonce an6=new Annonce(null,40,"graine","Donne des graines de potiron déjà germées. Je peux les remettre en main propre sur Paris ou bien les envoyer par la poste. Merci de me contacter avant de passer commande svp !",p4,u2);
+		annonceRepos.save(an6);
 
 		Evenement e1=new Evenement(null,"Bouturage de rosiers","Apprendre le bouturage de rosiers anglais et de rosiers anciens.Ils sont plus compliqués à bouturer. J'utilise une ancienne technique qui évite le mastic et permet d'avoir une réussite de quasiment 100%. Nous ferons du bouturage en terre mais aussi en pot pour que chacun puisse ramener son rosier. Prenez des gants et des pots si possible!",10,"10/11/2021","16h",null,a1);
 		evenementRepos.save(e1);
