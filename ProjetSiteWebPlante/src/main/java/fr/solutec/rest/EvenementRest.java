@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.solutec.entities.Adresse;
 import fr.solutec.entities.Evenement;
 import fr.solutec.entities.User;
 import fr.solutec.repository.EvenementRepository;
@@ -26,9 +27,8 @@ public class EvenementRest {
 	public Iterable<Evenement> getAllEvenement(){ // iterable un peu comme une liste avc fonctionnalité en +
 		return EvenRepos.findAll();}
 		
-	@PostMapping("insertEvent/{organisateur}")
-	public Evenement saveEvenement(@PathVariable User organisateur,@RequestBody Evenement e) {
-		e.setOrganisateur(organisateur);
+	@PostMapping("insertEvent")
+	public Evenement saveEvenement(@RequestBody Evenement e) {
 		return EvenRepos.save(e);}
 	
 	@PutMapping("event/{id}") //modifier un objet  --> considere qu'on a le user complet a modifer 
