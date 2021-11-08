@@ -1,5 +1,6 @@
 package fr.solutec.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -27,6 +28,7 @@ public class Annonce {
 	private Long idAnnonce;
 	private int stock;
 	private String type;
+	@Column(columnDefinition = "LONGTEXT")
 	private String description;
     @ManyToOne
 	private Plante plante;
