@@ -172,17 +172,17 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String Date1="2021-11-06 21:31:13";
 		Date d1=formatter.parse(Date1);
-		Message m1=new Message(null, "Message envoyé le plus ancien", d1,u4, u2);
+		Message m1=new Message(null, "Bonjour, avez vous toujours des boutures de rosier?", d1,u4, u2);
 		msgRepos.save(m1);
 		Calendar cal = Calendar.getInstance();
 		//Date d2=formatter.parse(formatter.format(cal.getTime()));
 		Date d2=cal.getTime();
-		Message m2=new Message(null, "Message envoyé le plus récent", d2,u4, u3);
+		Message m2=new Message(null, "Bonjour, encore merci pour l'atelier de la semaine dernière, j'ai beaucoup appris !", d2,u4, u3);
 		msgRepos.save(m2);
 		
-		Message m3=new Message(null, "Message reçu le plus ancien", d1,u1, u4);
+		Message m3=new Message(null, "Bonjour, avez vous toujours des boutures de rosier?", d1,u1, u4);
 		msgRepos.save(m3);
-		Message m4=new Message(null, "Message reçu le plus récent", d2,u2, u4);
+		Message m4=new Message(null, "Bonjour, encore merci pour l'atelier de la semaine dernière, j'ai beaucoup appris !", d2,u2, u1);
 		msgRepos.save(m4);
 		
 		
