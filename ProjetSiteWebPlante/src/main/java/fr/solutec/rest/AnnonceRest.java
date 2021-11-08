@@ -26,7 +26,7 @@ public class AnnonceRest {
 		return annonceRepos.findAll();
 	}
 		
-	@PostMapping("/new_annonce") //
+	@PostMapping("/newAnnonce") //
 	public Annonce saveAnnonce(@RequestBody Annonce a) {
 		return annonceRepos.save(a);
 	}
