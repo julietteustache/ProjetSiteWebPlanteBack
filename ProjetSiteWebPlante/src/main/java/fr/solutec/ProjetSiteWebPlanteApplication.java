@@ -82,13 +82,13 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		adresseRepos.save(a4);
 		
 
-		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","débutant",Long.parseLong("1000"),a3);
+		User u1=new User(null, "Eustache", "Juliette", "eujuliette","juju","Buisson ardent",Long.parseLong("1000"),a3);
 		userRepos.save(u1);
-		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","débutant",Long.parseLong("0") ,a2);
+		User u2=new User(null, "Cornet", "Arthur", "coarthur","tutur","Petit cactus",Long.parseLong("0") ,a2);
 		userRepos.save(u2);
-		User u3=new User(null, "Gallon", "Marie-Rose", "mrgallon","maro","débutant",Long.parseLong("0"),a1);
+		User u3=new User(null, "Gallon", "Marie-Rose", "mrgallon","maro","Grand chêne",Long.parseLong("2000"),a1);
 		userRepos.save(u3);
-		User u4=new User(null, "Msaidie", "Zaher", "mszaher","zaza","Primevère hivernale",Long.parseLong("750"),a4);
+		User u4=new User(null, "Msaidie", "Zaher", "mszaher","zaza","Tulipe printanière",Long.parseLong("750"),a4);
 		userRepos.save(u4);
 		
 		Annonce an1=new Annonce(null,3,"bouture","donne 3 bouture de bonsai",p2,u1);

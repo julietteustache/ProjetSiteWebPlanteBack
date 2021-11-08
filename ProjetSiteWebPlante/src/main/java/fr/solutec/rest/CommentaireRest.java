@@ -23,12 +23,12 @@ public class CommentaireRest {
 	
 	@GetMapping("getcomplante/{idPlante}")
 	public Iterable<Commentaire> getComPlante(@PathVariable Long idPlante) {
-		return comRepos.findByPlanteIdPlante(idPlante);
+		return comRepos.findByPlanteIdPlanteOrderByIdCommentaireDesc(idPlante);
 	}
 	
 	@GetMapping("getcomtechnique/{idTechnique}")
 	public Iterable<Commentaire> getComTechnique(@PathVariable Long idTechnique) {
-		return comRepos.findByTechniqueIdTechnique(idTechnique);
+		return comRepos.findByTechniqueIdTechniqueOrderByIdCommentaireDesc(idTechnique);
 	}
 	
 	@PostMapping("getcomannonce")
