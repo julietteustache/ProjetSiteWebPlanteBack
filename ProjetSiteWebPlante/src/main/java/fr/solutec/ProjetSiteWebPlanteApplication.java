@@ -17,6 +17,7 @@ import fr.solutec.entities.Commentaire;
 import fr.solutec.entities.Evenement;
 import fr.solutec.entities.Message;
 import fr.solutec.entities.Plante;
+import fr.solutec.entities.Publication;
 import fr.solutec.entities.Technique;
 import fr.solutec.entities.User;
 import fr.solutec.repository.AdresseRepository;
@@ -25,6 +26,7 @@ import fr.solutec.repository.CommentaireRepository;
 import fr.solutec.repository.EvenementRepository;
 import fr.solutec.repository.MessageRepository;
 import fr.solutec.repository.PlanteRepository;
+import fr.solutec.repository.PublicationRepository;
 import fr.solutec.repository.TechniqueRepository;
 import fr.solutec.repository.UserRepository;
 
@@ -46,6 +48,8 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 	TechniqueRepository techRepos;
 	@Autowired
 	MessageRepository msgRepos;
+	@Autowired
+	PublicationRepository publiRepos;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetSiteWebPlanteApplication.class, args);
@@ -185,6 +189,10 @@ public class ProjetSiteWebPlanteApplication implements CommandLineRunner {
 		Message m4=new Message(null, "Bonjour, encore merci pour l'atelier de la semaine dernière, j'ai beaucoup appris !", d2,u2, u1);
 		msgRepos.save(m4);
 		
+		Publication pu1=new Publication(null, u4, "J'ai réussi à faire pousser un bonsaï !", d1, null);
+		publiRepos.save(pu1);
+		Publication pu2=new Publication(null, u4, "Regardez mon rosier !", d2, null);
+		publiRepos.save(pu2);
 		
 		
 	}
